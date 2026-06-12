@@ -1,5 +1,8 @@
 # Reflow: Momentum-Based Productivity Support System
 
+Link Figma
+https://www.figma.com/design/4CXSVK77KgxXs5R0aU0Hwj/Untitled?node-id=0-1&t=QuZGL2owSUDlT3i1-1 
+
 ## 1. Latar Belakang Masalah
 Sering ngerasa susah banget buat mulai ngerjain tugas padahal niatnya udah ada? Atau gampang banget ke-*distract* main *gadget*, nunda-nunda padahal tau *deadline* udah mepet, dan ujung-ujungnya malah pusing sendiri ngeliat kerjaan yang numpuk?
 
