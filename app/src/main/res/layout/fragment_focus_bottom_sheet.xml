@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_sheet"
+    android:orientation="vertical"
+    android:padding="32dp">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="24dp"
+        android:background="#E0E0E0" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Apa SATU langkah paling kecil yang mau diselesaikan sekarang?"
+        android:textColor="#3D4536"
+        android:textSize="26sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Fokus pada hal terkecil untuk\nmembangun momentum."
+        android:textColor="#A4AEA0"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/etSmallStep"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginVertical="24dp"
+        android:background="@android:drawable/editbox_background_normal"
+        android:hint="Misal: Tulis pseudocode algoritma greedy"
+        android:paddingHorizontal="16dp"
+        android:textColor="#3D4536"
+        android:textColorHint="#C5CFC1"
+        android:textSize="15sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnStartFocus"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:backgroundTint="#A3B18A"
+        android:text="Mulai Fokus →"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:cornerRadius="30dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:layout_margin="4dp"
+            android:background="#C5CFC1" />
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="4dp"
+            android:layout_margin="4dp"
+            android:background="#EAEFE5" />
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="4dp"
+            android:layout_margin="4dp"
+            android:background="#EAEFE5" />
+    </LinearLayout>
+
+</LinearLayout>

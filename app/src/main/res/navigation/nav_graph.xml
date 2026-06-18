@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.universitaspertamina.reflow.ui.auth.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.universitaspertamina.reflow.ui.auth.ForgotPasswordFragment"
+        android:label="ForgotPassword"
+        tools:layout="@layout/fragment_forgot_password" />
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.universitaspertamina.reflow.ui.auth.RegisterFragment"
+        android:label="Register"
+        tools:layout="@layout/fragment_register" />
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.universitaspertamina.reflow.ui.main.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_focusBottomSheet"
+            app:destination="@id/focusBottomSheet" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.universitaspertamina.reflow.ui.main.ListFragment"
+        android:label="List"
+        tools:layout="@layout/fragment_list">
+        <action
+            android:id="@+id/action_listFragment_to_addTaskFragment"
+            app:destination="@id/addTaskFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addTaskFragment"
+        android:name="com.universitaspertamina.reflow.ui.main.AddTaskFragment"
+        android:label="AddTask"
+        tools:layout="@layout/fragment_add_task" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.universitaspertamina.reflow.ui.main.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.universitaspertamina.reflow.ui.main.HistoryFragment"
+        android:label="History"
+        tools:layout="@layout/fragment_history" />
+
+    <dialog
+        android:id="@+id/focusBottomSheet"
+        android:name="com.universitaspertamina.reflow.ui.main.FocusBottomSheet"
+        android:label="FocusBottomSheet"
+        tools:layout="@layout/fragment_focus_bottom_sheet">
+        <action
+            android:id="@+id/action_focusSheet_to_timerFragment"
+            app:destination="@id/timerFragment" />
+    </dialog>
+
+    <fragment
+        android:id="@+id/timerFragment"
+        android:name="com.universitaspertamina.reflow.ui.main.TimerFragment"
+        android:label="Timer"
+        tools:layout="@layout/fragment_timer">
+        <action
+            android:id="@+id/action_timerFragment_to_recoveryFragment"
+            app:destination="@id/recoveryFragment" />
+        <action
+            android:id="@+id/action_timerFragment_to_completionBottomSheet"
+            app:destination="@id/completionBottomSheet" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/recoveryFragment"
+        android:name="com.universitaspertamina.reflow.ui.main.RecoveryFragment"
+        android:label="Recovery"
+        tools:layout="@layout/fragment_recovery" />
+
+    <dialog
+        android:id="@+id/completionBottomSheet"
+        android:name="com.universitaspertamina.reflow.ui.main.CompletionBottomSheet"
+        android:label="CompletionBottomSheet"
+        tools:layout="@layout/fragment_completion_bottom_sheet" />
+
+</navigation>
