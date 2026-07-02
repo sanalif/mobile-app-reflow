@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_sheet_rounded"
+    android:orientation="vertical"
+    android:padding="32dp">
+
+    <!-- Judul -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Apa yang ada di\npikiranmu?"
+        android:textSize="32sp"
+        android:textColor="#2C3E2D"
+        android:fontFamily="serif" />
+
+    <!-- Input Task -->
+    <EditText
+        android:id="@+id/etTaskTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:hint="Contoh: Tugas Besar PAA..."
+        android:textSize="20sp"
+        android:background="@null"
+        android:paddingBottom="16dp" />
+
+    <!-- TextView baru untuk menampilkan tanggal yang dipilih -->
+    <TextView
+        android:id="@+id/tvSelectedDateInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="14sp"
+        android:textColor="#A3B18A"
+        android:textStyle="italic" />
+
+    <!-- Label Deadline -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="TENGGAT WAKTU (OPSIONAL)"
+        android:textSize="12sp"
+        android:textColor="#6B7280" />
+
+    <!-- Opsi Deadline (Hari Ini, Besok, Pilih) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <include
+            android:id="@+id/containerHariIni"
+            layout="@layout/item_deadline_option"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <include
+            android:id="@+id/containerBesok"
+            layout="@layout/item_deadline_option"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <include
+            android:id="@+id/containerPilih"
+            layout="@layout/item_deadline_option"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <!-- Tombol Simpan -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSimpan"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:text="Simpan"
+        android:textColor="#FFFFFF"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:cornerRadius="99dp"
+        app:backgroundTint="#A3B18A" />
+
+    <!-- Tombol Batal -->
+    <TextView
+        android:id="@+id/tvBatal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Batal"
+        android:gravity="center"
+        android:textColor="#6B7280" />
+
+</LinearLayout>
